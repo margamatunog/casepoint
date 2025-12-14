@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ee60ea75473532107671b3f4116d434e" label="Auto-Assignment Rules" max_length="40" name="x_1603911_casepo_0_assignment_rule" type="collection">
+        <element label="Priority Threshold" max_length="40" name="priority_threshold" type="integer"/>
+        <element label="Target Assignment Group" max_length="32" name="target_group" reference="sys_user_group" type="reference"/>
+        <element default="true" label="Active" max_length="255" name="active" type="boolean"/>
+        <element label="Category Match" max_length="40" name="category_match" type="string"/>
+        <element label="Keyword Match" max_length="40" name="keyword_match" type="string"/>
+        <index name="index">
+            <element name="target_group"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="ocr_text" label="OCR Text" language="en" table="x_1603911_casepo_0_case_document">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>ocr_text</element>
+            <help/>
+            <hint/>
+            <label>OCR Text</label>
+            <language>en</language>
+            <name>x_1603911_casepo_0_case_document</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-14 14:19:22</sys_created_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>OCR Text</sys_name>
+            <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+            <sys_update_name>sys_documentation_x_1603911_casepo_0_case_document_ocr_text_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-14 14:19:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e6e31e3d47b132107671b3f4116d43c1" extends="task" label="Legal Case" max_length="40" name="x_1603911_casepo_0_legal_case" type="collection">
+        <element choice="1" label="AI Priority" max_length="40" name="ai_priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="2" value="high"/>
+                <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="Urgent" sequence="3" value="urgent"/>
+            </choice>
+        </element>
+        <element label="AI Case Summary" max_length="4000" name="case_summary" type="string"/>
+        <element label="Legal Requestor" max_length="32" name="legal_requestor" reference="sys_user" type="reference"/>
+        <element label="AI Confidence" max_length="38" name="ai_confidence" type="decimal"/>
+        <element choice="1" label="AI Category" max_length="40" name="ai_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Compliance" sequence="3" value="compliance"/>
+                <element inactive_on_update="false" label="Contract" sequence="2" value="contract"/>
+                <element inactive_on_update="false" label="Intellectual Property" sequence="0" value="IP"/>
+                <element inactive_on_update="false" label="Human Resource" sequence="1" value="HR"/>
+            </choice>
+        </element>
+    </element>
+</database>

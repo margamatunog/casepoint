@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="eacdda31473532107671b3f4116d4333" label="AI Job Log" max_length="40" name="x_1603911_casepo_0_ai_job_log" type="collection">
+        <element label="Input to AI" max_length="4000" name="input_text" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Retry" sequence="2" value="retry"/>
+                <element inactive_on_update="false" label="Success" sequence="0" value="success"/>
+                <element inactive_on_update="false" label="Failed" sequence="1" value="failed"/>
+            </choice>
+        </element>
+        <element label="Confidence Score" max_length="38" name="confidence" type="decimal"/>
+        <element default="gemini-3.5-turbo" label="Gemini Model Version" max_length="40" name="model_version" type="string"/>
+        <element label="Case Reference" max_length="32" name="case_reference" reference="x_1603911_casepo_0_legal_case" type="reference"/>
+        <element default="glide.server.now" label="Timestamp" max_length="255" name="timestamp" type="glide_date_time"/>
+        <element label="AI Response JSON" max_length="4000" name="response" type="string"/>
+        <index name="index">
+            <element name="case_reference"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dbe5567147f132107671b3f4116d437e" label="Case Document" max_length="40" name="x_1603911_casepo_0_case_document" type="collection">
+        <element default="1" label="Document Version" max_length="255" name="document_version" type="integer"/>
+        <element default="False" label="Is Latest Version" max_length="255" name="is_latest_version" type="boolean"/>
+        <element label="OCR Text" max_length="4000" name="ocr_text" type="string"/>
+        <element label="Parent Case" max_length="32" name="parent_case" reference="x_1603911_casepo_0_legal_case" type="reference"/>
+        <element label="Uploaded On" max_length="40" name="uploaded_on" type="glide_date_time"/>
+        <element label="Uploaded By" max_length="32" name="uploaded_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="parent_case"/>
+        </index>
+        <index name="index2">
+            <element name="uploaded_by"/>
+        </index>
+    </element>
+</database>

@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="c7e3163d47b132107671b3f4116d433b" sys_domain="global" table="x_1603911_casepo_0_legal_case" version="3" view="">
+    <sys_ui_section caption="Case Information" section_id="c7e3163d47b132107671b3f4116d433b" sys_domain="global" table="x_1603911_casepo_0_legal_case" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>cfe3163d47b132107671b3f4116d433d</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>7ef04735473932107671b3f4116d43da</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>assigned_to</element>
+            <element>legal_requestor</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>c3e3163d47b132107671b3f4116d433f</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>faf04735473932107671b3f4116d43db</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cmdb_ci</element>
+            <element>short_description</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>8fe3163d47b132107671b3f4116d433f</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>7af04735473932107671b3f4116d43dc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>active</element>
-            <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>07e3163d47b132107671b3f4116d4341</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>4be3163d47b132107671b3f4116d4340</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>f6f04735473932107671b3f4116d43dd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>76f04735473932107671b3f4116d43de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>priority</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>cfe35e3d47b132107671b3f4116d4395</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>f2f04735473932107671b3f4116d43df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>state</element>
+            <element>assigned_to</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>8be35e3d47b132107671b3f4116d4396</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>7ef08735473932107671b3f4116d4311</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>parent</element>
+            <element>assignment_group</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>47e35e3d47b132107671b3f4116d4397</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>faf08735473932107671b3f4116d4312</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,60 +116,46 @@
             <element>.end_split</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>03e35e3d47b132107671b3f4116d4398</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>7af08735473932107671b3f4116d4313</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>short_description</element>
+            <element>description</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>cbe35e3d47b132107671b3f4116d4398</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>f6f08735473932107671b3f4116d4314</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
-            <position>10</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>87e35e3d47b132107671b3f4116d4399</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>work_notes</element>
-            <position>11</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>43e35e3d47b132107671b3f4116d439a</sys_id>
+            <sys_created_on>2025-12-14 17:23:32</sys_created_on>
+            <sys_id>76f08735473932107671b3f4116d4315</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
+            <sys_ui_section caption="Case Information" display_value="Case Information" name="x_1603911_casepo_0_legal_case" sys_domain="global" view="Default view">c7e3163d47b132107671b3f4116d433b</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
-            <caption/>
+            <caption>Case Information</caption>
             <header>false</header>
             <name>x_1603911_casepo_0_legal_case</name>
             <roles/>
@@ -179,7 +165,7 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>c7e3163d47b132107671b3f4116d433b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_name>x_1603911_casepo_0_legal_case</sys_name>
             <sys_overrides/>
             <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
@@ -187,7 +173,7 @@
             <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
             <sys_update_name>sys_ui_section_c7e3163d47b132107671b3f4116d433b</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_on>2025-12-14 17:23:31</sys_updated_on>
             <sys_user/>
             <title>true</title>
             <view display_value="Default view" name="NULL">Default view</view>

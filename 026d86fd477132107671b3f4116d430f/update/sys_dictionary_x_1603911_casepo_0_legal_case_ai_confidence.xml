@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="ai_confidence" table="x_1603911_casepo_0_legal_case">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>0</choice>
@@ -33,7 +33,7 @@
         <name>x_1603911_casepo_0_legal_case</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
         <sys_update_name>sys_dictionary_x_1603911_casepo_0_legal_case_ai_confidence</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-14 14:12:32</sys_updated_on>
+        <sys_updated_on>2025-12-14 17:23:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

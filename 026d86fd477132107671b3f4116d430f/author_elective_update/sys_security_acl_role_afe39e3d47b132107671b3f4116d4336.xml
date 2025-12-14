@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 14:06:42</sys_created_on>
+        <sys_id>afe39e3d47b132107671b3f4116d4336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1603911_casepo_0_legal_case.x_1603911_casepo_0.admin</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_security_acl display_value="x_1603911_casepo_0_legal_case">abe39e3d47b132107671b3f4116d4331</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_afe39e3d47b132107671b3f4116d4336</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 14:06:42</sys_updated_on>
+        <sys_user_role display_value="x_1603911_casepo_0.admin" name="x_1603911_casepo_0.admin">da6d86fd477132107671b3f4116d4345</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CasePoint">026d86fd477132107671b3f4116d430f</application>
+        <file_path/>
+        <instance_id>053af19eebd46e9c3a48f459bad0cd8b</instance_id>
+        <instance_name>dev300580</instance_name>
+        <name>sys_security_acl_role_afe39e3d47b132107671b3f4116d4336</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-14 14:06:42</sys_created_on><sys_id>afe39e3d47b132107671b3f4116d4336</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1603911_casepo_0_legal_case.x_1603911_casepo_0.admin</sys_name><sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package><sys_policy/><sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope><sys_security_acl display_value="x_1603911_casepo_0_legal_case">abe39e3d47b132107671b3f4116d4331</sys_security_acl><sys_update_name>sys_security_acl_role_afe39e3d47b132107671b3f4116d4336</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-14 14:06:42</sys_updated_on><sys_user_role display_value="x_1603911_casepo_0.admin" name="x_1603911_casepo_0.admin">da6d86fd477132107671b3f4116d4345</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1485804824</payload_hash>
+        <record_name>x_1603911_casepo_0_legal_case.x_1603911_casepo_0.admin</record_name>
+        <reverted_from/>
+        <source>c26d86fd477132107671b3f4116d433d</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 14:06:42</sys_created_on>
+        <sys_id>a3e39e3d47b132107671b3f4116d433c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b1d2f601f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 14:06:42</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>afe39e3df4b132106cd109942a05993a</update_guid>
+        <update_guid_history>afe39e3df4b132106cd109942a05993a:-1485804824</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1603911_casepo_0_legal_case.x_1603911_casepo_0.admin">20947ab147b532107671b3f4116d43a4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 16:29:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>a6965caebf9a497880002aa01e9cce40</sys_id>
+        <sys_metadata>afe39e3d47b132107671b3f4116d4336</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1603911_casepo_0_legal_case.x_1603911_casepo_0.admin</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_parent display_value="x_1603911_casepo_0_legal_case">abe39e3d47b132107671b3f4116d4331</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_scope_delete display_value="">01d54d985e11441b82264f39e6ce4cd1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_afe39e3d47b132107671b3f4116d4336</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_afe39e3d47b132107671b3f4116d4336">a3e39e3d47b132107671b3f4116d433c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 16:29:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

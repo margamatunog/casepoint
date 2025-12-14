@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Can submit and view own legal cases</description>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1603911_casepo_0.requestor</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>requestor</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 15:20:23</sys_created_on>
+        <sys_id>44b422f9473532107671b3f4116d4360</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1603911_casepo_0.requestor</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_user_role_44b422f9473532107671b3f4116d4360</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 15:21:42</sys_updated_on>
+    </sys_user_role>
+</record_update>

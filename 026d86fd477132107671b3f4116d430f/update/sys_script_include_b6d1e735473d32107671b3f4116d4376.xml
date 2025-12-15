@@ -17,14 +17,21 @@ CasePoint_AIServices.prototype = {
         try {
             var text = caseGR.description.toString();
             
-            // Simple attachment text extraction (MVP – no full OCR)
-            var attachments = new GlideAttachment().getAttachments(caseGR.getTableName(), caseGR.sys_id);
-            while (attachments.next()) {
-                if (attachments.file_name.endsWith('.txt') || attachments.file_name.endsWith('.pdf')) {
-                    text += '\n\nAttachment: ' + attachments.file_name;
-                    // In real app: extract text via OCR IntegrationHub spoke
+            // --- FIX: Use GlideRecord for Scoped App Compatibility ---
+            // Old: var attachments = new GlideAttachment().getAttachments(...) 
+            var att = new GlideRecord('sys_attachment');
+            att.addQuery('table_name', caseGR.getTableName());
+            att.addQuery('table_sys_id', caseGR.getUniqueValue());
+            att.query();
+            
+            while (att.next()) {
+                var fileName = att.getValue('file_name');
+                if (fileName.endsWith('.txt') || fileName.endsWith('.pdf')) {
+                    text += '\n\nAttachment: ' + fileName;
+                    // Note: Real text extraction requires IntegrationHub or separate plugin
                 }
             }
+            // ---------------------------------------------------------
             
             var systemPrompt = "You are a legal case triage AI. Analyze this case and respond in JSON format with:\n" +
                                "- summary: 2-3 sentence summary\n" +
@@ -38,7 +45,8 @@ CasePoint_AIServices.prototype = {
             request.setEndpoint('https://api.openai.com/v1/chat/completions');
             request.setHttpMethod('POST');
             request.setRequestHeader('Content-Type', 'application/json');
-            request.setRequestHeader('Authorization', 'Bearer ' + gs.getProperty('openai.api.key') || 'YOUR_OPENAI_API_KEY_HERE');
+            // Ensure you have the 'openai.api.key' System Property set!
+            request.setRequestHeader('Authorization', 'Bearer ' + gs.getProperty('x_1603911_casepo_0.openai.api.key'));
             
             var body = {
                 model: 'gpt-3.5-turbo',
@@ -46,15 +54,18 @@ CasePoint_AIServices.prototype = {
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
                 ],
-                temperature: 0.7,  // Balanced creativity vs determinism
-                max_tokens: 500    // Limit response length for cost/efficiency
+                temperature: 0.7, 
+                max_tokens: 500
             };
             request.setRequestBody(JSON.stringify(body));
             
             var response = request.execute();
             var responseBody = response.getBody();
-            var json = JSON.parse(responseBody);
             
+            if (response.getStatusCode() != 200) {
+                 throw new Error("OpenAI API Error " + response.getStatusCode() + ": " + responseBody);
+            }
+            var json = JSON.parse(responseBody);
             var aiText = json.choices[0].message.content;
             var aiJSON = JSON.parse(aiText.replace(/```json|```/g, '').trim());
             
@@ -65,20 +76,14 @@ CasePoint_AIServices.prototype = {
             caseGR.ai_confidence = aiJSON.confidence || 0.8;
             caseGR.update();
             
-            // Log AI job
-            var log = new GlideRecord('x_1603911_casepo_0.ai_job_log');
-            log.initialize();
-            log.case_ref = caseGR.sys_id;
-            log.response = responseBody;
-            log.confidence = aiJSON.confidence || 0;
-            log.model_version = 'gpt-3.5-turbo';
-            log.status = 'Success';
-            log.insert();
+            // Optional: Log to ai_job_log if it exists
+            // var log = new GlideRecord('x_1603911_casepo_0_ai_job_log'); 
+            // ... log insertion logic ...
             
             return { success: true, data: aiJSON };
             
         } catch (e) {
-            gs.error('OpenAI Error: ' + e);
+            gs.error('CasePoint AI Error: ' + e.message);
             return { success: false, error: e.message };
         }
     },
@@ -89,13 +94,13 @@ CasePoint_AIServices.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-12-14 20:01:28</sys_created_on>
         <sys_id>b6d1e735473d32107671b3f4116d4376</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>CasePoint_AIServices</sys_name>
         <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
         <sys_update_name>sys_script_include_b6d1e735473d32107671b3f4116d4376</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-15 19:59:08</sys_updated_on>
+        <sys_updated_on>2025-12-15 20:35:20</sys_updated_on>
     </sys_script_include>
 </record_update>

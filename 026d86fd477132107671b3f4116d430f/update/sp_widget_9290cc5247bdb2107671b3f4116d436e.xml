@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.pre-line {
+  white-space: pre-line;
+}
+.side-info {
+  background: #fcfcfc;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+.info-group {
+  margin-bottom: 15px;
+}
+.info-group label {
+  color: #777;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+.info-group div {
+  font-weight: 500;
+  color: #333;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>cp_case_details</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>CasePoint Case Details</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var sys_id = $sp.getParameter('sys_id') || options.sys_id;
+  if (!sys_id) return;
+  var gr = new GlideRecordSecure('x_1603911_casepo_0_legal_case');
+  if (gr.get(sys_id)) {
+    data.case = {
+      sys_id: gr.getUniqueValue(),
+      number: gr.getValue('number'),
+      short_description: gr.getValue('short_description'),
+      description: gr.getValue('description'),
+      state: gr.getDisplayValue('state'),
+      priority: gr.getDisplayValue('ai_priority'), // Using AI Priority
+      ai_category: gr.getDisplayValue('ai_category'),
+      requestor: gr.getDisplayValue('legal_requestor'),
+      created: gr.getDisplayValue('sys_created_on')
+    };
+    // Fetch Case Documents
+    data.documents = [];
+    var docGR = new GlideRecordSecure('x_1603911_casepo_0_case_document');
+    docGR.addQuery('parent_case', sys_id);
+    docGR.orderByDesc('uploaded_on');
+    docGR.query();
+    while (docGR.next()) {
+      data.documents.push({
+        sys_id: docGR.getUniqueValue(),
+        version: docGR.getValue('document_version'),
+        is_latest: docGR.getValue('is_latest_version') == '1',
+        uploaded_on: docGR.getDisplayValue('uploaded_on'),
+        uploaded_by: docGR.getDisplayValue('uploaded_by')
+      });
+    }
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:39:58</sys_created_on>
+        <sys_id>9290cc5247bdb2107671b3f4116d436e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CasePoint Case Details</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sp_widget_9290cc5247bdb2107671b3f4116d436e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:40:22</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default cp-panel" ng-if="c.data.case">
+  <div class="panel-heading clearfix">
+    <div class="pull-left">
+      <h2 class="panel-title">{{c.data.case.number}}</h2>
+      <span class="label label-primary">{{c.data.case.state}}</span>
+    </div>
+    <div class="pull-right">
+      <span class="text-muted">Created: {{c.data.case.created}}</span>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+    <!-- Header Info -->
+    <div class="row info-row">
+      <div class="col-md-8">
+        <h3>{{c.data.case.short_description}}</h3>
+        <p class="pre-line">{{c.data.case.description}}</p>
+      </div>
+      <div class="col-md-4 side-info">
+        <div class="info-group">
+          <label>Requestor</label>
+          <div>{{c.data.case.requestor}}</div>
+        </div>
+        <div class="info-group">
+          <label>Priority</label>
+          <div>{{c.data.case.priority}}</div>
+        </div>
+        <div class="info-group" ng-if="c.data.case.ai_category">
+          <label>Category (AI)</label>
+          <div>{{c.data.case.ai_category}}</div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!-- Related List: Case Documents -->
+    <div class="related-list">
+        <h4><i class="fa fa-file-text-o"></i> Case Documents</h4>
+        <div ng-if="c.data.documents.length == 0" class="text-muted">No documents attached.</div>
+        <table class="table table-striped" ng-if="c.data.documents.length > 0">
+            <thead>
+                <tr>
+                    <th>Filename/Version</th>
+                    <th>Uploaded By</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="doc in c.data.documents">
+                    <td>
+                        <strong>Include Document</strong> (v{{doc.version}})
+                        <span ng-if="doc.is_latest" class="label label-success btn-xs">Latest</span>
+                    </td>
+                    <td>{{doc.uploaded_by}}</td>
+                    <td>{{doc.uploaded_on}}</td>
+                    <td>
+                        <button class="btn btn-default btn-xs" ng-click="c.download(doc.sys_id)"><i class="fa fa-download"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Upload Section (Simple Placeholder) -->
+        <div class="upload-section">
+            <button class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New Document</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="alert alert-danger" ng-if="!c.data.case">
+  Case not found or you do not have permission to view it.
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9290cc5247bdb2107671b3f4116d436e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:39:58</sys_created_on>
+        <sys_id>1e90cc5247bdb2107671b3f4116d4372</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:39:58</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

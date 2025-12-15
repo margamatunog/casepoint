@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card-action {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+  border-left: 4px solid transparent;
+}
+.card-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-left-color: $brand-secondary;
+}
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: lighten($brand-primary, 55%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.icon-circle i {
+  color: $brand-primary;
+  font-size: 20px;
+}
+.action-details {
+  flex-grow: 1;
+}
+.action-details h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $brand-primary;
+}
+.action-details p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+.action-arrow i {
+  color: #ccc;
+  transition: color 0.2s;
+}
+.card-action:hover .action-arrow i {
+  color: $brand-secondary;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>cp_quick_actions</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>CasePoint Quick Actions</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.actions = [
+    {
+      title: "Create New Case",
+      desc: "Submit a request for legal assistance",
+      icon: "fa-plus",
+      url: "?id=cp_submit_case"
+    },
+    {
+      title: "My Open Cases",
+      desc: "Track status of your ongoing items",
+      icon: "fa-list-alt",
+      url: "?id=cp_my_cases"
+    },
+    {
+      title: "Legal Knowledge",
+      desc: "Browse policies and FAQs",
+      icon: "fa-book",
+      url: "?id=kb_view2"
+    }
+  ];
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:37:13</sys_created_on>
+        <sys_id>0affff4247bdb2107671b3f4116d437a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CasePoint Quick Actions</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sp_widget_0affff4247bdb2107671b3f4116d437a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:38:01</sys_updated_on>
+        <template><![CDATA[<div class="row quick-actions-row">
+  <div class="col-md-4" ng-repeat="action in c.data.actions">
+    <a ng-href="{{action.url}}" class="card-action">
+      <div class="icon-circle">
+        <i class="fa {{action.icon}}"></i>
+      </div>
+      <div class="action-details">
+        <h3>{{action.title}}</h3>
+        <p>{{action.desc}}</p>
+      </div>
+      <div class="action-arrow">
+        <i class="fa fa-chevron-right"></i>
+      </div>
+    </a>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>0affff4247bdb2107671b3f4116d437a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:37:13</sys_created_on>
+        <sys_id>92ffff4247bdb2107671b3f4116d437f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:37:13</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

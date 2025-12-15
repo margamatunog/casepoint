@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $location) {
+  var c = this;
+  c.user_name = $scope.user.name;
+  c.current_page = $scope.page.id;
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navbar-inverse {
+  background-color: $brand-primary;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.brand-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.brand-highlight {
+  color: $brand-secondary;
+}
+.navbar-nav &gt; li &gt; a {
+  color: #e0e0e0;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+.navbar-nav &gt; li &gt; a:hover,
+.navbar-nav &gt; li.active &gt; a {
+  color: $brand-secondary;
+  background-color: transparent;
+}
+.btn-highlight {
+  background-color: $brand-secondary !important;
+  color: $brand-primary !important;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 6px 15px !important;
+}
+.btn-highlight:hover {
+  background-color: lighten($brand-secondary, 10%) !important;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>cp_header</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>CasePoint Header</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.user_is_logged_in = gs.getSession().isLoggedIn();
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:32:21</sys_created_on>
+        <sys_id>36de3b4247bdb2107671b3f4116d4357</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CasePoint Header</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sp_widget_36de3b4247bdb2107671b3f4116d4357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:33:23</sys_updated_on>
+        <template><![CDATA[<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="?id=cp_index">
+        <span class="brand-logo">CASE<span class="brand-highlight">POINT</span></span>
+      </a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{active: c.current_page == 'cp_index'}"><a href="?id=cp_index">Home</a></li>
+        <li ng-class="{active: c.current_page == 'cp_my_cases'}"><a href="?id=cp_my_cases">My Cases</a></li>
+        <li ng-class="{active: c.current_page == 'cp_submit_case'}">
+          <a href="?id=cp_submit_case" class="btn-highlight">New Case</a>
+        </li>
+        <li class="dropdown" uib-dropdown>
+          <a href="javascript:void(0)" class="dropdown-toggle" uib-dropdown-toggle>
+            {{c.user_name}} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="?id=user_profile">Profile</a></li>
+            <li><a href="{{::portal.logoutUrl}}">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>36de3b4247bdb2107671b3f4116d4357</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 16:32:21</sys_created_on>
+        <sys_id>f2de3b4247bdb2107671b3f4116d435e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 16:32:21</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -2,7 +2,14 @@
     <sp_portal action="INSERT_OR_UPDATE">
         <alternate_portal/>
         <communication_channels/>
-        <css_variables/>
+        <css_variables>$brand-primary: #002366; /* Dark Blue */&#13;
+$brand-secondary: #FFD700; /* Gold */&#13;
+$brand-success: #28a745;&#13;
+$brand-info: #17a2b8;&#13;
+$brand-warning: #ffc107;&#13;
+$brand-danger: #dc3545;&#13;
+$body-bg: #f4f6f9;&#13;
+$text-color: #333;</css_variables>
         <dark_theme/>
         <default>false</default>
         <enable_ais>false</enable_ais>
@@ -30,15 +37,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-12-15 14:02:12</sys_created_on>
         <sys_id>19bb97c64779b2107671b3f4116d43bc</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>CasePoint</sys_name>
         <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
         <sys_update_name>sp_portal_19bb97c64779b2107671b3f4116d43bc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-15 15:16:15</sys_updated_on>
-        <theme display_value="La Jolla">a7a6e78277002300a6e592718a10617a</theme>
+        <sys_updated_on>2025-12-15 16:31:35</sys_updated_on>
+        <theme display_value="CasePoint Theme">eb2e7b0a477db2107671b3f4116d4316</theme>
         <title>CasePoint</title>
         <ts_index_group/>
         <url_suffix>casepoint</url_suffix>

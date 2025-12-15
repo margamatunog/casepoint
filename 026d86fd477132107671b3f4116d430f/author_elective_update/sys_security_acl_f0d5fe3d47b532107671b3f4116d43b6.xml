@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for records in x_1603911_casepo_0_legal_case, for users with role x_1603911_casepo_0.officer, and if the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1603911_casepo_0_legal_case</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = 
+    current.assigned_to == gs.getUserID() || 
+    (current.assignment_group && current.assignment_group.hasRole('x_1603911_casepo_0.officer'));]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 16:46:01</sys_created_on>
+        <sys_id>f0d5fe3d47b532107671b3f4116d43b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1603911_casepo_0_legal_case</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_security_acl_f0d5fe3d47b532107671b3f4116d43b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 18:15:50</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CasePoint">026d86fd477132107671b3f4116d430f</application>
+        <file_path/>
+        <instance_id>053af19eebd46e9c3a48f459bad0cd8b</instance_id>
+        <instance_name>dev300580</instance_name>
+        <name>sys_security_acl_f0d5fe3d47b532107671b3f4116d43b6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to/&gt;&lt;condition/&gt;&lt;controlled_by_refs/&gt;&lt;decision_type&gt;allow&lt;/decision_type&gt;&lt;description&gt;Allow write for records in x_1603911_casepo_0_legal_case, for users with role x_1603911_casepo_0.officer, and if the ACL script returns true.&lt;/description&gt;&lt;local_or_existing&gt;Local&lt;/local_or_existing&gt;&lt;name&gt;x_1603911_casepo_0_legal_case&lt;/name&gt;&lt;operation display_value="write"&gt;write&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[answer = 
+    current.assigned_to == gs.getUserID() || 
+    (current.assignment_group &amp;&amp; current.assignment_group.hasRole('x_1603911_casepo_0.officer'));]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-14 16:46:01&lt;/sys_created_on&gt;&lt;sys_id&gt;f0d5fe3d47b532107671b3f4116d43b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_1603911_casepo_0_legal_case&lt;/sys_name&gt;&lt;sys_package display_value="CasePoint" source="x_1603911_casepo_0"&gt;026d86fd477132107671b3f4116d430f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CasePoint"&gt;026d86fd477132107671b3f4116d430f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_f0d5fe3d47b532107671b3f4116d43b6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-15 18:15:50&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>55790564</payload_hash>
+        <record_name>x_1603911_casepo_0_legal_case</record_name>
+        <reverted_from/>
+        <source>ffed5cde4771f2107671b3f4116d435f</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 18:48:09</sys_created_on>
+        <sys_id>48fd5cde4771f2107671b3f4116d43fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b2357676e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 18:48:09</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>228698de8f31f210c1089b960d62a46e</update_guid>
+        <update_guid_history>228698de8f31f210c1089b960d62a46e:55790564,97ddd4deda71f210f704f96dc6d3a52c:0,228698de8f31f210c1089b960d62a46e:55790564,569dd09e7571f210ee5a598992554162:0,228698de8f31f210c1089b960d62a46e:55790564,99683ef17df532105c2cf742face047f:-918124295,6c5dc77dfe79321094b7624343400b6e:1294518893,99683ef17df532105c2cf742face047f:-918124295,3cac83f9f47932108306868cde628e4c:1294518893,99683ef17df532105c2cf742face047f:-918124295</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 21:12:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>e0f2a9147f2e4fc082c0f44a5dbd3c40</sys_id>
+        <sys_metadata>f0d5fe3d47b532107671b3f4116d43b6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1603911_casepo_0_legal_case</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_parent display_value="x_1603911_casepo_0_legal_case">26e35e3d47b132107671b3f4116d431d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_scope_delete display_value="">01d54d985e11441b82264f39e6ce4cd1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_f0d5fe3d47b532107671b3f4116d43b6</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_f0d5fe3d47b532107671b3f4116d43b6">48fd5cde4771f2107671b3f4116d43fc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 21:12:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

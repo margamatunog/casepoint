@@ -8,27 +8,57 @@
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>4fe3163d47b132107671b3f4116d430d</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>e051cdd647b5f2107671b3f4116d4343</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>priority</element>
+            <element>legal_requestor</element>
             <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>cbe3163d47b132107671b3f4116d430e</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>6051cdd647b5f2107671b3f4116d4344</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>ai_category</element>
+            <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>e451cdd647b5f2107671b3f4116d4344</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>description</element>
+            <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>6c51cdd647b5f2107671b3f4116d4344</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -36,14 +66,14 @@
             <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>2</position>
+            <position>4</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>43e3163d47b132107671b3f4116d430f</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>e051cdd647b5f2107671b3f4116d4345</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -51,14 +81,14 @@
             <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>3</position>
+            <position>5</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>c7e3163d47b132107671b3f4116d430f</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>6851cdd647b5f2107671b3f4116d4345</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -66,14 +96,14 @@
             <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>4</position>
+            <position>6</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>4fe3163d47b132107671b3f4116d430f</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>ec51cdd647b5f2107671b3f4116d4345</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -81,14 +111,14 @@
             <list_id display_value="x_1603911_casepo_0_legal_case" element="NULL" name="x_1603911_casepo_0_legal_case" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47e3163d47b132107671b3f4116d430c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>5</position>
+            <position>7</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
-            <sys_id>0be35e3d47b132107671b3f4116d4389</sys_id>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
+            <sys_id>6451cdd647b5f2107671b3f4116d4346</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -101,8 +131,8 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-12-14 14:06:40</sys_created_on>
+            <sys_created_by>david.loo</sys_created_by>
+            <sys_created_on>2025-12-15 21:22:44</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>47e3163d47b132107671b3f4116d430c</sys_id>
@@ -112,8 +142,8 @@
             <sys_policy/>
             <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
             <sys_update_name>sys_ui_list_x_1603911_casepo_0_legal_case_null</sys_update_name>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-12-14 14:06:40</sys_updated_on>
+            <sys_updated_by>david.loo</sys_updated_by>
+            <sys_updated_on>2025-12-15 21:22:44</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

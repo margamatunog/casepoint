@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>pencil-square-o</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Submit New Case</label>
+        <order>100</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="cp_submit_case">11b9e74247f9b2107671b3f4116d4377</sp_page>
+        <sp_rectangle_menu display_value="CasePoint Menu">821c27ca47f9b2107671b3f4116d434c</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 15:13:05</sys_created_on>
+        <sys_id>509cafca47f9b2107671b3f4116d436c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Submit New Case</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_509cafca47f9b2107671b3f4116d436c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 15:13:05</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=509cafca47f9b2107671b3f4116d436c"/>
+</record_update>

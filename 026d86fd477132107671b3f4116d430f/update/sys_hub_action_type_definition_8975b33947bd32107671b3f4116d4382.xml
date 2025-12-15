@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>27800</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>process_case_with_openai</internal_name>
+        <label_cache>[{"name":"{{action.case}}","label":"action➛Case","type":"action","ref":"","reference_display":"Legal Case","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master_snapshot>5ad937f147fd32107671b3f4116d4353</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Process Case with OpenAI</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:12:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8975b33947bd32107671b3f4116d4382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Process Case with OpenAI</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_8975b33947bd32107671b3f4116d4382</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 15:30:40</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=8975b33947bd32107671b3f4116d4382"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8975b33947bd32107671b3f4116d4382"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8975b33947bd32107671b3f4116d4382</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>6cd9f3f147fd32107671b3f4116d4307</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">acd9b3f147fd32107671b3f4116d43f6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8975b33947bd32107671b3f4116d4382</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>a0d9f3f147fd32107671b3f4116d4308</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">20d9b3f147fd32107671b3f4116d43ee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382^id=8975b33947bd32107671b3f4116d4382"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=8975b33947bd32107671b3f4116d4382^sys_idNOT INe0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</action>
+        <cid>cc452279-9ec5-4c44-a114-3e3cd5842080</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>e0d9b3f147fd32107671b3f4116d43d3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:07:53</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e0d9b3f147fd32107671b3f4116d43d3</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>24d9b3f147fd32107671b3f4116d43ea</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:07:53</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    // Calls script&#13;
+    new x_1603911_casepo_0.CasePoint_AIServices().processCaseWithOpenAI(inputs.case);&#13;
+&#13;
+    // Fire assignment event&#13;
+    gs.eventQueue(&#13;
+        'x_1603911_casepo_0.new.assignment',&#13;
+        inputs.case,&#13;
+        inputs.case.assignment_group,&#13;
+        inputs.case.assigned_to&#13;
+    );&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e0d9b3f147fd32107671b3f4116d43d3</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>e0d9b3f147fd32107671b3f4116d43e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e0d9b3f147fd32107671b3f4116d43d3"/>
+    <sys_hub_action_input action="delete_multiple" query="model=8975b33947bd32107671b3f4116d4382^sys_idNOT INd0d9b3f147fd32107671b3f4116d434a"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a800a308-8329-45f9-9db6-f6729843fafe</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1603911_casepo_0_legal_case</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>case</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Case</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</model>
+        <model_id>8975b33947bd32107671b3f4116d4382</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_8975b33947bd32107671b3f4116d4382</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_1603911_casepo_0_legal_case">x_1603911_casepo_0_legal_case</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:51</sys_created_on>
+        <sys_id>d0d9b3f147fd32107671b3f4116d434a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d0d9b3f147fd32107671b3f4116d434a"/>
+    <sys_hub_action_output action="delete_multiple" query="model=8975b33947bd32107671b3f4116d4382^sys_idNOT IN20d9b3f147fd32107671b3f4116d43ee,acd9b3f147fd32107671b3f4116d43f6"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=99ab731a-f56c-4c87-9a63-1d444cf0ae24</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</model>
+        <model_id>8975b33947bd32107671b3f4116d4382</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>20d9b3f147fd32107671b3f4116d43ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=20d9b3f147fd32107671b3f4116d43ee"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=20d9b3f147fd32107671b3f4116d43ee"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=9cbef82c-1bca-4062-a1ad-6df233e91928,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</model>
+        <model_id>8975b33947bd32107671b3f4116d4382</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>acd9b3f147fd32107671b3f4116d43f6</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:08:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=acd9b3f147fd32107671b3f4116d43f6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=acd9b3f147fd32107671b3f4116d43f6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8975b33947bd32107671b3f4116d4382"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=8975b33947bd32107671b3f4116d4382^sys_idNOT INa4d9f3f147fd32107671b3f4116d430a"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>a4d9f3f147fd32107671b3f4116d430a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=a4d9f3f147fd32107671b3f4116d430a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>case</element>
+        <help/>
+        <hint/>
+        <label>Case</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_8975b33947bd32107671b3f4116d4382</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:51</sys_created_on>
+        <sys_id>58d9b3f147fd32107671b3f4116d437b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Case</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8975b33947bd32107671b3f4116d4382_case_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_8975b33947bd32107671b3f4116d4382"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>20d9f3f147fd32107671b3f4116d4300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382___dont_treat_as_error___en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:52</sys_created_on>
+        <sys_id>e4d9b3f147fd32107671b3f4116d43f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382___action_status___en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_8975b33947bd32107671b3f4116d4382"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=8975b33947bd32107671b3f4116d4382^sys_idNOT IN6ed937f147fd32107671b3f4116d43e4"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</action_id>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"6ed937f147fd32107671b3f4116d43e4","name":"plan","plan_signature":null}}</plan>
+        <snapshot>4980c8ce47fd32107671b3f4116d4329</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:32:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6ed937f147fd32107671b3f4116d43e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 22:01:07</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>27800</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>process_case_with_openai</internal_name>
+        <label_cache>[{"name":"{{action.case}}","label":"action➛Case","type":"action","ref":"","reference_display":"Legal Case","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Process Case with OpenAI</name>
+        <natlang/>
+        <outputs/>
+        <parent_action display_value="Process Case with OpenAI">8975b33947bd32107671b3f4116d4382</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5ad937f147fd32107671b3f4116d4353</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5ad937f147fd32107671b3f4116d4353"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5ad937f147fd32107671b3f4116d4353"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>5ad937f147fd32107671b3f4116d4353</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>5ed937f147fd32107671b3f4116d439f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">dad937f147fd32107671b3f4116d4383</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>5ad937f147fd32107671b3f4116d4353</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>92d937f147fd32107671b3f4116d43a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">92d937f147fd32107671b3f4116d437c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353^id=5ad937f147fd32107671b3f4116d4353"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=5ad937f147fd32107671b3f4116d4353^sys_idNOT IN9ad937f147fd32107671b3f4116d4368"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Process Case with OpenAI">5ad937f147fd32107671b3f4116d4353</action>
+        <cid>cc452279-9ec5-4c44-a114-3e3cd5842080</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>9ad937f147fd32107671b3f4116d4368</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:08:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9ad937f147fd32107671b3f4116d4368</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>1ed937f147fd32107671b3f4116d4378</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9ad937f147fd32107671b3f4116d4368</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>52d937f147fd32107671b3f4116d4379</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:08:01</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    // Calls script&#13;
+    new x_1603911_casepo_0.CasePoint_AIServices().processCaseWithOpenAI(inputs.case);&#13;
+&#13;
+    // Fire assignment event&#13;
+    gs.eventQueue(&#13;
+        'x_1603911_casepo_0.new.assignment',&#13;
+        inputs.case,&#13;
+        inputs.case.assignment_group,&#13;
+        inputs.case.assigned_to&#13;
+    );&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9ad937f147fd32107671b3f4116d4368"/>
+    <sys_hub_action_input action="delete_multiple" query="model=5ad937f147fd32107671b3f4116d4353^sys_idNOT IN9ad937f147fd32107671b3f4116d4359"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a800a308-8329-45f9-9db6-f6729843fafe</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1603911_casepo_0_legal_case</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>case</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Case</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Process Case with OpenAI">5ad937f147fd32107671b3f4116d4353</model>
+        <model_id>5ad937f147fd32107671b3f4116d4353</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5ad937f147fd32107671b3f4116d4353</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_1603911_casepo_0_legal_case">x_1603911_casepo_0_legal_case</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>9ad937f147fd32107671b3f4116d4359</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9ad937f147fd32107671b3f4116d4359"/>
+    <sys_hub_action_output action="delete_multiple" query="model=5ad937f147fd32107671b3f4116d4353^sys_idNOT IN92d937f147fd32107671b3f4116d437c,dad937f147fd32107671b3f4116d4383"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=99ab731a-f56c-4c87-9a63-1d444cf0ae24</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Process Case with OpenAI">5ad937f147fd32107671b3f4116d4353</model>
+        <model_id>5ad937f147fd32107671b3f4116d4353</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>92d937f147fd32107671b3f4116d437c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=92d937f147fd32107671b3f4116d437c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=92d937f147fd32107671b3f4116d437c"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=9cbef82c-1bca-4062-a1ad-6df233e91928,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Process Case with OpenAI">5ad937f147fd32107671b3f4116d4353</model>
+        <model_id>5ad937f147fd32107671b3f4116d4353</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>dad937f147fd32107671b3f4116d4383</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 08:08:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dad937f147fd32107671b3f4116d4383"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dad937f147fd32107671b3f4116d4383"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5ad937f147fd32107671b3f4116d4353"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=5ad937f147fd32107671b3f4116d4353^sys_idNOT IN96d937f147fd32107671b3f4116d43a2"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Process Case with OpenAI">5ad937f147fd32107671b3f4116d4353</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>96d937f147fd32107671b3f4116d43a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=96d937f147fd32107671b3f4116d43a2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>case</element>
+        <help/>
+        <hint/>
+        <label>Case</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5ad937f147fd32107671b3f4116d4353</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>96d937f147fd32107671b3f4116d4361</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Case</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_5ad937f147fd32107671b3f4116d4353"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>16d937f147fd32107671b3f4116d4382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 21:31:59</sys_created_on>
+        <sys_id>5ed937f147fd32107671b3f4116d438b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 21:31:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_5ad937f147fd32107671b3f4116d4353"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>8975b33947bd32107671b3f4116d4382</sys_id>
+        <latest_snapshot>5ad937f147fd32107671b3f4116d4353</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch9-10-22-2025_11-02-2025_1032.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

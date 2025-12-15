@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>number,short_description,state,ai_category,ai_priority,opened_at</field_list>
+        <filter table="x_1603911_casepo_0_legal_case">u_legal_requestor = javascript:gs.getUserID()</filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by>number</order_by>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b49ae70a47f9b2107671b3f4116d4315</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-15 15:03:52</sys_created_on>
+        <sys_id>b69a6f8647f9b2107671b3f4116d4342</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
+        <sys_update_name>sp_instance_table_b69a6f8647f9b2107671b3f4116d4342</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-15 15:05:33</sys_updated_on>
+        <table>x_1603911_casepo_0_legal_case</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=b69a6f8647f9b2107671b3f4116d4342"/>
+</record_update>

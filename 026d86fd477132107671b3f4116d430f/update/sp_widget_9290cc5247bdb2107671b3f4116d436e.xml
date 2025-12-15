@@ -3,29 +3,36 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
-        <css>.pre-line {
-  white-space: pre-line;
-}
-.side-info {
-  background: #fcfcfc;
-  padding: 15px;
-  border-radius: 4px;
-  border: 1px solid #eee;
-}
-.info-group {
+        <css>.section-header {
+  font-size: 16px;
+  font-weight: 700;
+  color: $brand-primary;
+  border-bottom: 2px solid $brand-secondary;
+  padding-bottom: 5px;
+  margin-top: 20px;
   margin-bottom: 15px;
 }
-.info-group label {
+.field-value {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+label {
   color: #777;
   font-size: 11px;
   text-transform: uppercase;
   display: block;
   margin-bottom: 2px;
 }
-.info-group div {
-  font-weight: 500;
-  color: #333;
-}</css>
+.pre-line { white-space: pre-line; }
+.ai-summary {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 3px solid $brand-info;
+  font-style: italic;
+}
+.mt-20 { margin-top: 20px; }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -44,92 +51,146 @@
   if (!sys_id) return;
   var gr = new GlideRecordSecure('x_1603911_casepo_0_legal_case');
   if (gr.get(sys_id)) {
-    data.case = {
-      sys_id: gr.getUniqueValue(),
-      number: gr.getValue('number'),
-      short_description: gr.getValue('short_description'),
-      description: gr.getValue('description'),
-      state: gr.getDisplayValue('state'),
-      priority: gr.getDisplayValue('ai_priority'), // Using AI Priority
-      ai_category: gr.getDisplayValue('ai_category'),
-      requestor: gr.getDisplayValue('legal_requestor'),
-      created: gr.getDisplayValue('sys_created_on')
-    };
-    // Fetch Case Documents
-    data.documents = [];
-    var docGR = new GlideRecordSecure('x_1603911_casepo_0_case_document');
-    docGR.addQuery('parent_case', sys_id);
-    docGR.orderByDesc('uploaded_on');
-    docGR.query();
-    while (docGR.next()) {
-      data.documents.push({
-        sys_id: docGR.getUniqueValue(),
-        version: docGR.getValue('document_version'),
-        is_latest: docGR.getValue('is_latest_version') == '1',
-        uploaded_on: docGR.getDisplayValue('uploaded_on'),
-        uploaded_by: docGR.getDisplayValue('uploaded_by')
-      });
-    }
+      data.isValid = true;
+      data.case = {
+          sys_id: gr.getUniqueValue(),
+          number: gr.getValue('number'),
+          short_description: gr.getDisplayValue('short_description'),
+          description: gr.getDisplayValue('description'),
+          state: gr.getDisplayValue('state'),
+          priority: gr.getDisplayValue('priority'), // Standard Priority
+          assigned_to: gr.getDisplayValue('assigned_to'),
+          requestor: gr.getDisplayValue('legal_requestor'),
+          
+          // AI Fields
+          ai_priority: gr.getDisplayValue('ai_priority'),
+          ai_category: gr.getDisplayValue('ai_category'),
+          ai_confidence: gr.getDisplayValue('ai_confidence'),
+          ai_summary: gr.getDisplayValue('case_summary') // Mapped to 'case_summary' field
+      };
+      
+      // Fetch Standard Attachments
+      data.attachments = [];
+      var attCheck = new GlideRecordSecure('sys_attachment');
+      attCheck.addQuery('table_sys_id', sys_id);
+      attCheck.query();
+      while(attCheck.next()) {
+        data.attachments.push({
+          name: attCheck.getValue('file_name'),
+          size: attCheck.getValue('size_bytes') + ' bytes',
+          sys_id: attCheck.getUniqueValue()
+        });
+      }
   }
-})();
-]]></script>
+  // Fetch Custom Case Documents
+  data.documents = [];
+  var docGR = new GlideRecordSecure('x_1603911_casepo_0_case_document');
+  docGR.addQuery('parent_case', sys_id);
+  docGR.orderByDesc('uploaded_on');
+  docGR.query();
+  while (docGR.next()) {
+    data.documents.push({
+      sys_id: docGR.getUniqueValue(),
+      version: docGR.getValue('document_version'),
+      is_latest: docGR.getValue('is_latest_version') == '1',
+      uploaded_on: docGR.getDisplayValue('uploaded_on'),
+      uploaded_by: docGR.getDisplayValue('uploaded_by'),
+      // Assuming name/filename is implicitly handled or generic
+      filename: "Case Document" 
+    });
+  }
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-12-15 16:39:58</sys_created_on>
         <sys_id>9290cc5247bdb2107671b3f4116d436e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>CasePoint Case Details</sys_name>
         <sys_package display_value="CasePoint" source="x_1603911_casepo_0">026d86fd477132107671b3f4116d430f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CasePoint">026d86fd477132107671b3f4116d430f</sys_scope>
         <sys_update_name>sp_widget_9290cc5247bdb2107671b3f4116d436e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-15 16:40:22</sys_updated_on>
-        <template><![CDATA[<div class="panel panel-default cp-panel" ng-if="c.data.case">
+        <sys_updated_on>2025-12-15 19:27:23</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default cp-panel" ng-if="c.data.isValid">
   <div class="panel-heading clearfix">
     <div class="pull-left">
       <h2 class="panel-title">{{c.data.case.number}}</h2>
-      <span class="label label-primary">{{c.data.case.state}}</span>
     </div>
     <div class="pull-right">
-      <span class="text-muted">Created: {{c.data.case.created}}</span>
+      <span class="label label-primary">{{c.data.case.state}}</span>
     </div>
   </div>
   
   <div class="panel-body">
-    <!-- Header Info -->
+    
+    <!-- Section 1: Case Information -->
+    <div class="section-header">Case Information</div>
     <div class="row info-row">
-      <div class="col-md-8">
-        <h3>{{c.data.case.short_description}}</h3>
-        <p class="pre-line">{{c.data.case.description}}</p>
+      <div class="col-md-6">
+        <label>Case Title</label>
+        <div class="field-value">{{c.data.case.short_description}}</div>
       </div>
-      <div class="col-md-4 side-info">
-        <div class="info-group">
-          <label>Requestor</label>
-          <div>{{c.data.case.requestor}}</div>
-        </div>
-        <div class="info-group">
-          <label>Priority</label>
-          <div>{{c.data.case.priority}}</div>
-        </div>
-        <div class="info-group" ng-if="c.data.case.ai_category">
-          <label>Category (AI)</label>
-          <div>{{c.data.case.ai_category}}</div>
-        </div>
+      <div class="col-md-3">
+        <label>Requestor</label>
+        <div class="field-value">{{c.data.case.requestor}}</div>
+      </div>
+      <div class="col-md-3">
+        <label>Assigned To</label>
+        <div class="field-value">{{c.data.case.assigned_to}}</div>
       </div>
     </div>
-    
+    <div class="row info-row">
+      <div class="col-md-3">
+        <label>State</label>
+        <div class="field-value">{{c.data.case.state}}</div>
+      </div>
+      <div class="col-md-3">
+        <label>Priority</label>
+        <div class="field-value">{{c.data.case.priority}}</div>
+      </div>
+      <div class="col-md-6">
+        <label>Description</label>
+        <div class="field-value pre-line">{{c.data.case.description}}</div>
+      </div>
+    </div>
+    <hr>
+    <!-- Section 2: AI Insights (Read Only) -->
+    <div class="section-header"><i class="fa fa-magic"></i> AI Insights</div>
+    <div class="row info-row">
+      <div class="col-md-3">
+        <label>AI Category</label>
+        <div class="field-value">{{c.data.case.ai_category}}</div>
+      </div>
+      <div class="col-md-3">
+        <label>AI Priority</label>
+        <div class="field-value">{{c.data.case.ai_priority}}</div>
+      </div>
+      <div class="col-md-3">
+        <label>AI Confidence</label>
+        <div class="field-value">{{c.data.case.ai_confidence}}</div>
+      </div>
+    </div>
+    <div class="row info-row">
+      <div class="col-md-12">
+        <label>AI Case Summary</label>
+        <div class="field-value ai-summary">{{c.data.case.ai_summary}}</div>
+      </div>
+    </div>
     <hr>
     
-    <!-- Related List: Case Documents -->
+    <!-- Section 3: Document Tracking -->
+    <div class="section-header"><i class="fa fa-folder-open"></i> Document Tracking</div>
+    
+    <!-- Custom Case Documents -->
     <div class="related-list">
-        <h4><i class="fa fa-file-text-o"></i> Case Documents</h4>
-        <div ng-if="c.data.documents.length == 0" class="text-muted">No documents attached.</div>
-        <table class="table table-striped" ng-if="c.data.documents.length > 0">
+        <h4>Case Documents</h4>
+        <div ng-if="c.data.documents.length == 0" class="text-muted small">No case documents found.</div>
+        <table class="table table-striped table-condensed" ng-if="c.data.documents.length > 0">
             <thead>
                 <tr>
-                    <th>Filename/Version</th>
+                    <th>Filename (Version)</th>
                     <th>Uploaded By</th>
                     <th>Date</th>
                     <th>Action</th>
@@ -138,7 +199,7 @@
             <tbody>
                 <tr ng-repeat="doc in c.data.documents">
                     <td>
-                        <strong>Include Document</strong> (v{{doc.version}})
+                        {{doc.filename || 'Document'}} (v{{doc.version}})
                         <span ng-if="doc.is_latest" class="label label-success btn-xs">Latest</span>
                     </td>
                     <td>{{doc.uploaded_by}}</td>
@@ -149,18 +210,33 @@
                 </tr>
             </tbody>
         </table>
-        
-        <!-- Upload Section (Simple Placeholder) -->
-        <div class="upload-section">
-            <button class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New Document</button>
+    </div>
+    <!-- Standard Attachments (sys_attachment) -->
+     <div class="related-list mt-20">
+        <div class="clearfix">
+           <h4 class="pull-left">Standard Attachments (AI Source)</h4>
+           <div class="pull-right">
+              <!-- Unique ID for the file input to avoid collisions -->
+              <input type="file" id="file-upload-{{::c.data.case.sys_id}}" style="display:none" onchange="angular.element(this).scope().c.filesSelected(this)">
+              <button class="btn btn-primary btn-sm" ng-click="c.triggerUpload()">
+                <i class="fa" ng-class="{'fa-upload': !c.uploading, 'fa-spinner fa-spin': c.uploading}"></i> 
+                {{c.uploading ? 'Uploading...' : 'Upload Document'}}
+              </button>
+           </div>
         </div>
+        <div ng-if="c.data.attachments.length == 0" class="text-muted small">No standard attachments.</div>
+        <ul class="list-group" ng-if="c.data.attachments.length > 0">
+          <li class="list-group-item" ng-repeat="att in c.data.attachments">
+            <i class="fa fa-paperclip"></i> {{att.name}}
+            <span class="pull-right text-muted">{{att.size}}</span>
+          </li>
+        </ul>
     </div>
   </div>
 </div>
-<div class="alert alert-danger" ng-if="!c.data.case">
+<div class="alert alert-danger" ng-if="!c.data.isValid">
   Case not found or you do not have permission to view it.
-</div>
-]]></template>
+</div>]]></template>
     </sp_widget>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>9290cc5247bdb2107671b3f4116d436e</id>
